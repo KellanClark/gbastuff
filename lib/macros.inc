@@ -52,7 +52,7 @@ macro write_io_reg location, reg {
 
 macro write_io_word location, value {
 	load_word r0, (value)
-	str r0, [r12, (location - (MEM_IO + IO_OFFSET))]
+	str r0, [r12, (location - MEM_IO)]
 }
 
 ; Same thing for read
